@@ -1,0 +1,107 @@
+import { shuffleArray } from "../utils";
+
+const questions = [
+    {
+        "question":"The Statue of Liberty was a gift to the US from which Country?",
+        "options":[
+            {
+                "label":"France",
+                "isCorrect": true
+            },
+            {
+                "label": "Japan",
+                "isCorrect": false
+            },
+            {
+                "label": "Holland",
+                "isCorrect": false
+            }
+
+        ]
+    },
+    {
+        "question": "Where did the bungee jump originate?",
+        "options": [
+            {
+                "label": "Canada",
+                "isCorrect": false
+            },
+            {
+                "label": "New Zealand",
+                "isCorrect": true
+            },
+            {
+                "label": "Australia",
+                "isCorrect": false
+            },
+            {
+                "label": "America",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Which country is nicknamed 'the boot'?",
+        "options": [
+            {
+                "label": "Italy",
+                "isCorrect": true
+            },
+            {
+                "label": "Wales",
+                "isCorrect": false
+            },
+            {
+                "label": "Germany",
+                "isCorrect": false
+            },
+            {
+                "label": "Belgium",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Which country invented tea?",
+        "options": [
+            {
+                "label": "India",
+                "isCorrect": false
+            },
+            {
+                "label": "China",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "Which country is home to the most lakes in the entire world?",
+        "options": [
+            {
+                "label": "Norway",
+                "isCorrect": false
+            },
+            {
+                "label": "Canada",
+                "isCorrect": true
+            },
+            {
+                "label": "Russia",
+                "isCorrect": false
+            },
+            {
+                "label": "America",
+                "isCorrect": false
+            }
+        ]
+    }
+]
+// Shuffle the questions array
+const shuffledQuestions = shuffleArray(questions);
+
+// Shuffle options for each question
+shuffledQuestions.forEach(question => {
+    question.options = shuffleArray(question.options);
+});
+
+export { shuffledQuestions}
